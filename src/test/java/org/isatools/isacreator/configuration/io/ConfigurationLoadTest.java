@@ -19,7 +19,7 @@ public class ConfigurationLoadTest {
 
             for(File file : configurationFiles) {
 
-                if(!file.isHidden() && !file.getName().startsWith(".")) {
+                if(!file.isHidden() && !file.getName().startsWith(".") && file.isDirectory()) {
 
                     ConfigXMLParser parser = new ConfigXMLParser(ConfigurationLoadingSource.ISACREATOR, file.getAbsolutePath());
 
